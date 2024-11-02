@@ -12,5 +12,6 @@ Rails.application.routes.draw do
 
   # Actors Path
   get("/actors/", { :controller => "actor", :action => "index" })
+  get("/actors/:actor_id/", { :controller => "actor", :action => "actor_page"})
 
 end
