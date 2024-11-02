@@ -6,26 +6,12 @@
 
 <dl>
   <dt>
-    ID
-  </dt>
-  <dd>
-    <%=@specific_movie.id%>
-  </dd>
-
-  <dt>
-    Image
-  </dt>
-  <dd>
-    <img src="<%=@specific_movie.image%>" style="width:250px;">
-  </dd>
-  
-  <dt>
     Title
   </dt>
   <dd>
     <%=@specific_movie.title%>
   </dd>
-
+  
   <dt>
     Year
   </dt>
@@ -34,13 +20,32 @@
   </dd>
 
   <dt>
+    Duration
+  </dt>
+  <dd>
+    <%=@specific_movie.duration%>
+  </dd>
+  
+  <dt>
+    Description
+  </dt>
+  <dd>
+    <%=@specific_movie.description%>
+  </dd>
+
+  <dt>
+    Image
+  </dt>
+  <dd>
+    <img src="<%=@specific_movie.image%>" style="width:250px;">
+  </dd>
+
+  <dt>
     Director
   </dt>
   <dd>
     <%=@specific_movie.director%>
   </dd>
-
-  
 
   <dt>
     Created at
