@@ -10,6 +10,7 @@ class DirectorController < ApplicationController
     @eldest_director_name = eldest_director.name
     dob_string = eldest_director.dob
     @eldest_director_dob = dob_string.strftime("%B %m, %Y")
+    @eldest_director_id = eldest_director.id
     
     render({ :template => "director_templates/eldest"})
   end
@@ -21,6 +22,7 @@ class DirectorController < ApplicationController
     @youngest_director_name = youngest_director.name
     dob_string = youngest_director.dob
     @youngest_director_dob = dob_string.strftime("%B %m, %Y")
+    @youngest_director_id = youngest_director.id
 
     render({ :template => "director_templates/youngest"})
   end
