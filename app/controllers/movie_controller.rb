@@ -6,6 +6,7 @@ class MovieController < ApplicationController
   def movie_page
     @movie_id = params[:movie_id]
     @specific_movie = Movie.where(:id => @movie_id).at(0)
+    @director = Director.where(:id => @specific_movie.director_id).at(0)
     render({ :template => "movie_templates/movie_page"})
   end
 end

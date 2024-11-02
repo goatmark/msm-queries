@@ -2,6 +2,10 @@
 
 <h1>Movie #<%=@movie_id%> details</h1>
 
+<a href="/movies">
+  Go back
+</a>
+
 <hr>
 
 <dl>
@@ -44,7 +48,7 @@
     Director
   </dt>
   <dd>
-    <%=@specific_movie.director%>
+    <%=@director.name%>
   </dd>
 
   <dt>
