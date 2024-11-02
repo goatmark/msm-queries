@@ -4,7 +4,7 @@ class DirectorController < ApplicationController
   end
 
   def eldest
-    eldest_director = Director.where.not({:dob => nil}).order({ :dob => :desc }).at(0)
+    eldest_director = Director.where.not({:dob => nil}).order({ :dob => :asc }).at(0)
 
     # Director Name
     @eldest_director_name = eldest_director.name
@@ -15,7 +15,7 @@ class DirectorController < ApplicationController
   end
 
   def youngest
-    youngest_director = Director.where.not({:dob => nil}).order({ :dob => :asc }).at(0)
+    youngest_director = Director.where.not({:dob => nil}).order({ :dob => :desc }).at(0)
 
     # Director Name
     @youngest_director_name = youngest_director.name
