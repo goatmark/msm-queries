@@ -54,3 +54,29 @@
 </dl>
 
 <hr>
+
+<h1>Filmography</h1>
+
+<% matching_characters = Character.where({:actor_id => @specific_actor.id})%>
+
+<table border="1">
+
+<tr>
+  <th>Title</th>
+  <th>Year</th>
+  <th>Director</th>
+  <th>Character name</th>
+  <th></th>
+</tr>
+
+<% matching_characters.each do |a_character| %>
+  <tr>
+    <th>Title</th>
+    <th>Year</th>
+    <th>Director</th>
+    <th><%=a_character.name%></th>
+    <th><a href = "/movies/<%=a_character.movie_id%>">Show details</a></th>
+  </tr>
+<% end %>
+
+</table>

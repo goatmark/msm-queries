@@ -30,6 +30,7 @@ class DirectorController < ApplicationController
   def director_page
     @director_id = params[:director_id]
     @specific_director = Director.where(:id => @director_id).at(0)
+    
     render({ :template => "director_templates/director_page"})
   end
 end
