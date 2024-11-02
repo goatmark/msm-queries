@@ -70,10 +70,12 @@
 </tr>
 
 <% matching_characters.each do |a_character| %>
+<% matching_movie = Movie.where({:id=>a_character.movie_id}).at(0)%>
+<% matching_director = Director.where({:id => matching_movie.director_id}).at(0)%>
   <tr>
-    <th>Title</th>
-    <th>Year</th>
-    <th>Director</th>
+    <th><%=matching_movie.title%></th>
+    <th><%=matching_movie.year%></th>
+    <th><%=matching_director.name%></th>
     <th><%=a_character.name%></th>
     <th><a href = "/movies/<%=a_character.movie_id%>">Show details</a></th>
   </tr>
